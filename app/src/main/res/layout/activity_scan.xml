@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tvDevice_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备名称"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+        <TextView
+            android:id="@+id/tvDevice_Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            />
+
+        <TextView
+            android:id="@+id/tvBattery_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDevice_Head"
+            android:layout_marginTop="10dp"
+            android:text="电量"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+        <TextView
+            android:id="@+id/tvBattery_Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvDevice_Detail"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            />
+
+        <TextView
+            android:id="@+id/tvRealTimeStep_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBattery_Head"
+            android:layout_marginTop="10dp"
+            android:text="步数"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+
+        <TextView
+            android:id="@+id/tvRealTimeStep_Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvBattery_Detail"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+        <TextView
+            android:id="@+id/tvHeartRate_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRealTimeStep_Head"
+            android:layout_marginTop="10dp"
+            android:text="心率"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+
+        <TextView
+            android:id="@+id/tvHeartRate_Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvRealTimeStep_Detail"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.79">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/tvDisplayConnect">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_message"/>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvDisplayConnect"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:text="Dialog"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_below="@+id/linearLayout2"
+                android:background="#000000"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/tvDisplayConnect"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:maxLines="50"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentBottom="true"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_marginTop="10dp"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:id="@+id/BtnConfig"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:background="#ffffff"
+            android:onClick="HandleClickEvent"
+            android:src="@drawable/ic_config"/>
+
+        <ImageButton
+            android:id="@+id/BtnHeartRate"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:layout_toEndOf="@+id/BtnLogin"
+            android:background="#ffffff"
+            android:onClick="HandleClickEvent"
+            android:src="@drawable/ic_heart"/>
+
+        <ImageButton
+            android:id="@+id/BtnLogin"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/BtnConfig"
+            android:background="#ffffff"
+            android:onClick="HandleClickEvent"
+            android:src="@drawable/ic_user_info"/>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/BtnConfig"
+            android:layout_alignStart="@+id/BtnConfig"
+            android:layout_below="@+id/BtnConfig"
+            android:gravity="center_horizontal"
+            android:text="Config"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/BtnLogin"
+            android:layout_alignStart="@+id/BtnLogin"
+            android:layout_below="@+id/BtnLogin"
+            android:gravity="center_horizontal"
+            android:text="UserInfo"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/BtnHeartRate"
+            android:layout_below="@+id/BtnHeartRate"
+            android:gravity="center_horizontal"
+            android:text="Heart_Rate"/>
+
+        <ImageButton
+            android:id="@+id/BtnAction"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginStart="29dp"
+            android:background="#ffffff"
+            android:onClick="HandleClickEvent"
+            android:src="@drawable/ic_recycle"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/BtnHeartRate"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/BtnAction"
+            android:layout_alignStart="@+id/BtnAction"
+            android:layout_below="@+id/BtnAction"
+            android:gravity="center"
+            android:text="More"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IndoorClimbingBand_ver2.0</string>
+    <string name="title_activity_ble">Ble</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="Roraima">\u3000\u3000罗赖马山位于南美洲北部的帕卡赖马山脉，是这座山脉的最高峰。罗赖马山在西班牙语中意为"河流的母亲"，这座位于巴西、委内瑞拉和圭亚那三国交界处陡峭山峰约3亿年的历史，让它成为奥里诺科河系、亚马孙河系以及圭亚那的许多河流的发源地。而今它依旧如史前模样，世人对它的好奇，也丝毫不减。\n\u3000\u3000据传罗赖马山是著名悬疑小说家阿瑟，柯南道尔于1912年创作的《迷失的世界》灵感来源，在小说里有很多史前的生物生存在一个高地上。罗赖马山刚好符合上述要求，由于被无法抵达的400多米高的悬崖保卫着，罗赖马山平坦的山地上孕育了很多在地球上其他地方没有的独特生物，这些动植物在这个天然的栖息地上生长繁衍，代代延续。 </string>
+    <string name="Title">虚拟与现实融合\n路径可调室内攀岩机</string>
+
+</resources>
