@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hepthst.indoorclimbingband_ver20.Model.CalorieParser;
 import com.hepthst.indoorclimbingband_ver20.R;
 
 import java.io.ByteArrayOutputStream;
@@ -43,8 +44,9 @@ public class DisplayActivity extends Activity {
     private Button mSend;
     private TextView mHeightTV;
     private TextView mIntroduceTV;
-    private static final String Address = "192.168.56.1";
-    private static final String FILENAME = "Data.txt";
+    private TextView mCalorie;
+    private static final String Address = "172.20.10.7"; //Changed by Net Environment
+    private static final String FILENAME = "Height.txt";
 
 
 
@@ -55,6 +57,7 @@ public class DisplayActivity extends Activity {
         mHeightTV = (TextView) findViewById(R.id.tvHeight_Detail);
         mIntroduceTV = (NsTextView)findViewById(R.id.Introduce);
         mIntroduceTV.setMovementMethod(new ScrollingMovementMethod());
+        mCalorie = (TextView) findViewById(R.id.tvCalorie_Detail);
 
         //this part for PageView
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -105,6 +108,9 @@ public class DisplayActivity extends Activity {
                         byte[] b = new byte[inputStream.available()]; // this what I need
                         inputStream.read(b);
                         mHeightTV.setText(new String(b) + "m");
+                        CalorieParser parser =  new CalorieParser((String) mHeightTV.getText());
+                        mCalorie.setText(String.format("%.2f",parser.getCalorie()).toString() + "cal");
+
                         Toast.makeText(DisplayActivity.this,"Data Updated ",Toast.LENGTH_LONG).show();
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -152,7 +158,7 @@ public class DisplayActivity extends Activity {
         });
     }
 
-        private void sendData(SocketChannel socketChannel, String stirng) throws IOException {
+    private void sendData(SocketChannel socketChannel, String stirng) throws IOException {
             byte[] bytes = stirng.getBytes();
             ByteBuffer buffer = ByteBuffer.wrap(bytes);
             socketChannel.write(buffer);
