@@ -94,17 +94,17 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:layout_weight="0.79">
+        android:layout_weight="0.79"
+        android:orientation="horizontal">
 
 
         <RelativeLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout"
-            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/tvDisplayConnect"
             android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/tvDisplayConnect">
+            android:layout_alignParentTop="true">
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -128,7 +128,7 @@
                     android:layout_above="@+id/tvDisplayConnect"
                     android:layout_gravity="center_vertical"
                     android:layout_toEndOf="@+id/imageView"
-                    android:text="Dialog"
+                    android:text="状态记录"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textSize="15dp"/>
             </LinearLayout>
@@ -145,15 +145,15 @@
 
 
         <TextView
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:id="@+id/tvDisplayConnect"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:maxLines="50"
-            android:scrollbars="vertical"
+            android:layout_alignParentBottom="true"
             android:layout_below="@+id/linearLayout"
-            android:layout_alignParentBottom="true"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:maxLines="50"
+            android:scrollbars="vertical"/>
 
 
     </RelativeLayout>
@@ -206,7 +206,7 @@
             android:layout_alignStart="@+id/BtnConfig"
             android:layout_below="@+id/BtnConfig"
             android:gravity="center_horizontal"
-            android:text="Config"/>
+            android:text="蓝牙设置"/>
 
         <TextView
             android:id="@+id/textView7"
@@ -216,7 +216,7 @@
             android:layout_alignStart="@+id/BtnLogin"
             android:layout_below="@+id/BtnLogin"
             android:gravity="center_horizontal"
-            android:text="UserInfo"/>
+            android:text="用户登录"/>
 
         <TextView
             android:id="@+id/textView8"
@@ -225,19 +225,19 @@
             android:layout_alignEnd="@+id/BtnHeartRate"
             android:layout_below="@+id/BtnHeartRate"
             android:gravity="center_horizontal"
-            android:text="Heart_Rate"/>
+            android:text="心率测试"/>
 
         <ImageButton
             android:id="@+id/BtnAction"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
-            android:layout_marginStart="29dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@+id/BtnHeartRate"
             android:background="#ffffff"
             android:onClick="HandleClickEvent"
-            android:src="@drawable/ic_recycle"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/BtnHeartRate"/>
+            android:src="@drawable/ic_list"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -247,7 +247,7 @@
             android:layout_alignStart="@+id/BtnAction"
             android:layout_below="@+id/BtnAction"
             android:gravity="center"
-            android:text="More"/>
+            android:text="信息反馈"/>
 
     </RelativeLayout>
 
