@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IndoorClimbingBand_ver2.0</string>
+    <string name="app_name">IndoorRockClimbing</string>
     <string name="title_activity_ble">Ble</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
