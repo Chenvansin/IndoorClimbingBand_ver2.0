@@ -35,6 +35,7 @@ import static android.content.ContentValues.TAG;
 
 /**
  * Created by hepthSt on 2017/10/13.
+ * Update on 2017/10/27.
  */
 
 public class DisplayActivity extends Activity {
