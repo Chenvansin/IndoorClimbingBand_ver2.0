@@ -108,9 +108,9 @@ public class DisplayActivity extends Activity {
                         inputStream = new FileInputStream(file);
                         byte[] b = new byte[inputStream.available()]; // this what I need
                         inputStream.read(b);
-                        mHeightTV.setText(new String(b) + "m");
+                        mHeightTV.setText(new String(b) + "m   ");
                         CalorieParser parser =  new CalorieParser((String) mHeightTV.getText());
-                        mCalorie.setText(String.format("%.2f",parser.getCalorie()).toString() + "cal");
+                        mCalorie.setText(String.format("%.2f",parser.getCalorie()).toString() + "kCal");
 
                         Toast.makeText(DisplayActivity.this,"Data Updated ",Toast.LENGTH_LONG).show();
                     } catch (FileNotFoundException e) {

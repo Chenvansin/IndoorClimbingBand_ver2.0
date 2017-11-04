@@ -28,7 +28,7 @@ public class CalorieParser {
     }
 
     private void parseCalorie() {
-        Speed = 0.1f; // m/s
+        Speed = 0.068f; // m/s
         height = Float.parseFloat(string);
         Calorie = ((height/Speed)/60f)*11;
     }
